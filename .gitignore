@@ -1,0 +1,6 @@
+node_modules
+.serverless
+usedTechnologies.txt
+.env.*
+.env
+policy.json
