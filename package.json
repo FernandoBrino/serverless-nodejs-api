@@ -4,19 +4,26 @@
   "description": "",
   "scripts": {
     "dev": "serverless offline --stage dev",
+    "info": "serverless info --stage prod --region us-east-1",
     "deploy": "serverless deploy --stage prod --region us-east-1",
-    "remove": "serverless remove --stage prod --region us-east-1"
+    "remove": "serverless remove --stage prod --region us-east-1",
+    "generate": "npx drizzle-kit generate",
+    "migrate": "tsx src/cli/migrator.js"
   },
   "dependencies": {
+    "@aws-sdk/client-ssm": "^3.682.0",
     "@neondatabase/serverless": "^0.9.5",
-    "aws-sdk": "^2.1691.0",
-    "dotenv": "^16.4.5",
+    "babel-plugin-inline-import": "^3.0.0",
     "drizzle-orm": "^0.33.0",
     "express": "^4.19.2",
+    "pg": "^8.13.1",
     "serverless-http": "^3.2.0"
   },
   "devDependencies": {
+    "@types/pg": "^8.11.10",
+    "dotenv": "^16.4.6",
     "drizzle-kit": "^0.24.2",
-    "serverless-offline": "^14.3.2"
+    "serverless-offline": "^14.3.2",
+    "tsx": "^4.19.2"
   }
 }

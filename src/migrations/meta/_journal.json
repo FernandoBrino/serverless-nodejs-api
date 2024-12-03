@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1732911393009,
+      "tag": "0000_pale_living_lightning",
+      "breakpoints": true
+    }
+  ]
+}

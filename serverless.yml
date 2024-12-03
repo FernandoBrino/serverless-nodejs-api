@@ -12,6 +12,18 @@ provider:
   environment:
     DEBUG: ${env:DEBUG, "0"}
     DATABASE_URL: ${env:DATABASE_URL, "Fallback value"}
+  iam:
+    role:
+      name: serverless-ssm-role
+      statements:
+        - Effect: 'Allow'
+          Resource: '*'
+          Action:
+            - "ssm:GetParameter"
+            - "ssm:GetParameters"
+            - "ssm:GetParametersByPath"
+            - "ssm:GetParameterHistory"
+            - "ssm:DescribeParameters"
 
 functions:
   api:
